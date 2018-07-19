@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header>
+    <h1>Github Finder</h1>
+  </header>
+  
+  <main id="wrapper">
+    <section id="search">
+      <p>Enter a username to fetch users profile info and repos:</p>
+      <input id="user-input" type="text" placeholder="Search user">
+    </section>
+    <!-- <div id="display-after-search"> -->
+      <section id="user-info">
+        <!-- <div id="profile">
+          <figure><img id="avatar" src="" alt=""></figure>  
+          <a id='btn-profile' class="label label-profile label-green">View Profile</a>
+        </div>
+        <div id="git-info">
+          <p class="label label-ligther">Public Repos:</p>
+          <p class="label label-darker">Public Gists:</p>
+          <p class="label label-ligther">Following:</p>
+          <p class="label label-darker">Followers:</p>
+        </div> -->
+      </section>
+      
+      <section id="repo-section">
+        <h2>Latest Repos</h2>
+        <div class="repo-wrapper">
+
+        </div>
+        <!-- <div class="repo">
+          <div class="repo-name">
+          </div>
+          <div class="repo-info">
+            <p class="label label-ligther">Public Repos:</p>
+            <p class="label label-darker">Public Repos:</p>
+            <p class="label label-green">Public Repos:</p>
+          </div>
+        </div> -->
+      </section>
+    <!-- </div> -->
+  </main>
+
+  <script src="fetch.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

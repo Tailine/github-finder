@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'monaco';
+  src: url('monaco.ttf') format('truetype'); 
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'monaco';
+}
+
+header {
+  background: #1C0F48;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  padding: .7em;
+}
+
+#wrapper {
+  padding: 1em;
+}
+
+/* #display-after-search {
+  display: none;
+} */
+
+#search {
+  font-size: 1.4em;
+  text-align: center;
+  padding: 1em;
+}
+
+#search input {
+  width: 70%;
+  max-width: 40em;
+  border-radius: 3px;
+  border: rgb(169, 167, 177) solid 2px;
+  height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  padding: .5em;
+}
+
+figure img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: .4em;
+}
+
+#name {
+  font-size: 1.5em;
+  padding: .3em;
+}
+
+#location {
+  font-size: 1.2em;
+}
+
+#btn-profile {
+  text-decoration: none;
+}
+
+#user-info {
+  text-align: center;
+}
+
+.label {
+  border-radius: 5px;
+  border: none;
+  padding: .7em 3em;
+  color: #fff;
+  font-size: 1em;
+  margin: .5em 0;
+}
+
+.label-profile {
+  display: block;
+  max-width: 10em;
+  margin: 2em auto;
+}
+
+.label-green {
+  background: #00B78D;
+}
+
+.label-ligther {
+  background: #7F2AFF;
+}
+
+.label-darker {
+  background: #1C0F48;
+}
+
+#git-info {
+  margin-top: 1.3em;
+}
+
+#git-info {
+  text-align: center;
+  max-width: 9em;
+  margin: 0 auto;
+}
+
+#git-info p {
+  padding: .5em;
+}
+
+#repo-section {
+  padding: 1em;
+  margin-top: 2.5em;
+  border: #70707056 solid 2px;
+}
+
+.repo {
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+  border: #70707056 solid 2px;
+  box-shadow: 3px;
+}
+
+.repo-name {
+  font-size: 1.3em;
+  margin: .5em 0;
+}
+
+.repo-info p {
+  display: block;
+  padding: .3em;
+  max-width: 200px;
+  margin: .5em auto;
+}
+
+/* Desktop */
+@media only screen and (min-width: 47em) {
+  .repo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .repo-info p {
+    display: inline-block;
+    width: fit-content;
+  }
+  figure img {
+    width: 292px;
+    height: 292px;
+  }
+  #name {
+    font-size: 2em;
+  }
+  
+  #location {
+    font-size: 1.5em;
+  }
+}
