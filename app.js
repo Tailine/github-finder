@@ -6,28 +6,14 @@ const repoSection = document.querySelector('#repo-section');
 
 const github = new Github();
 
-// avatar_url
-// followers
-// following
-// name
-// html_url - when user profile is clicked
-// public_repos OK
-// public_gists OK
-// location
-// company
-// blog
-// created_at - member since
-// repos_url - last 5 repos
-
-
-
 input.addEventListener('keyup', () => {
-	const user = input.value;
-  github.getUser(user).then(data => displayData(data))
+  const user = input.value;
+  if(user !== '') {
+    github.getUser(user).then(data => displayData(data))
                       .catch(err => console.log(err));
-  //result.then(r => console.log(r)).catch('deu merda')
+  }
 })
-//avatar.setAttribute('src', data.avatar_url)
+
 function manipulateData(userData) {
   console.log('manipulate data')
   github.getFollowers(userData.fowllowers).then(resp => console.log(resp))
@@ -54,15 +40,6 @@ function displayData(userData) {
   document.querySelector('#avatar').setAttribute('src', userData.avatar_url);
   document.querySelector('#btn-profile').setAttribute('href', userData.html_url);
   getLatestRepos(userData.repos_url);
-  // getLatestsRepos(userData.repos_url);
-  // console.log(userData.html_url);
-  // console.log(userData.followers);
-  // console.log(userData.following);
-  // console.log(userData.name);
-  // console.log(userData.location);
-  // console.log(userData.company);
-  // console.log(userData.blog);
-  // console.log(userData.created_at);
 }
 
 const getLatestRepos = (repo_url) => {
@@ -85,18 +62,6 @@ const displayRepositories = (repositories) => {
         </div>
       </div>`
     });    
-//  } else {
-  //  repositories.forEach(repository, i => {
-  //   output += `
-  //   <div class="repo">
-  //     <div class="repo-name">${repository.name}</div>
-  //     <div class="repo-info">
-  //       <p class="label label-ligther">Stars: </p>
-  //       <p class="label label-darker">Watchers: </p>
-  //       <p class="label label-green">Forks: ${repository.forks}</p>
-  //     </div>
-  //   </div>`
-  // });
- //}
- repoWrapper.innerHTML = output;
+
+  repoWrapper.innerHTML = output;
 }
